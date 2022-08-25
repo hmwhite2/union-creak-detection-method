@@ -2,17 +2,19 @@
 The following describes how to carry out the Union method to detect creaky voice from the publication: 
 
 White, H., Penney, J., Gibson, A., Szakay, A. & Cox, F. (2022). Evaluating automatic creaky voice detection methods. 
-    The Journal of the Acoustical Society of America
+    Journal of the Acoustical Society of America, 152(3).
     
 The researcher must decide whether they are going to conduct an analysis over all data (processing raw sound files through methods) or over sonorants only
-(requiring speech to be orthographically transcribed and processed through a forced aligner).
+(vowels, nasals, glides, liquids)(requiring speech to be orthographically transcribed and processed through a forced aligner).
 The researcher must also decide whether they are going to use the default settings of CD (no threshold sweep) or find the optimal threshold for CD for 
 their data (requiring a subset of data to be manually annotated for creak and a threshold sweep to be performed on this subset).
+
+The method requires researchers to use [Praat](https://www.fon.hum.uva.nl/praat/), [R](https://www.R-project.org/) and [MATLAB](https://au.mathworks.com/products/matlab.html) for processing.
 
 ## To begin:
 1. Resample sound files to 16000Hz
 2. Install REAPER (either [MacREAPER](https://kjdallaston.com/projects/) or [REAPER](https://github.com/google/REAPER/)) and download CD_method folder (adapted from [Kane et al.](https://github.com/jckane/Voice_Analysis_Toolkit/))
-3. **If you are doing a SONORANTS ONLY analysis:** Create phoneme csv files using the create_phoneme_files.R in R
+3. **If you are doing a SONORANTS ONLY analysis:** You will need to have sound files orthographically transcribed and process them through a forced aligner. [This](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/Pipeline) is the forced aligner used in White et al. 2022. Create phoneme csv files using the create_phoneme_files.R in R
 
 ## AM method:
 1. Chunk files into 20s intervals for REAPER (this is for quicker processing)
@@ -25,6 +27,7 @@ their data (requiring a subset of data to be manually annotated for creak and a 
     b. **If you are doing a SONORANTS ONLY analysis:** Get AM output by running get_am_output_sonorants.R script in R
 
 ## CD method:
+1. Create .TextGrid files for each sound files using create_blank_tg.praat script in Praat.
 - **If you are NOT doing a threshold sweep:**
 
     1. Open CD_method folder in MATLAB and open getCreakDetectorOutput.m file. Change your out/in directories on lines 12 and 36. To run the default settings for CD, make sure the thresh on line 17 is set to 0.3:0.01:0.3. Run this script.
