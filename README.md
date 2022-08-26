@@ -22,12 +22,12 @@ The method requires researchers to use [Praat](https://www.fon.hum.uva.nl/praat/
 3. Create concatenated and complete Pitch Mark csv files using the create_pm_files.R script in R
 4. Get AM output:
 
-    a. **If you are doing an ALL DATA analysis:** Get AM output by running get_am_output_alldata.R script in R
+    a. **If you are doing an ALL DATA analysis:** Create .TextGrid files for each sound file using create_blank_tg.praat script in Praat. Get AM output by running get_am_output_alldata.R script in R
    
     b. **If you are doing a SONORANTS ONLY analysis:** Get AM output by running get_am_output_sonorants.R script in R
 
 ## CD method:
-1. Create .TextGrid files for each sound files using create_blank_tg.praat script in Praat.
+1. Create .TextGrid files for each sound file using create_blank_tg.praat script in Praat (if not already done).
 - **If you are NOT doing a threshold sweep:**
 
     1. Open CD_method folder in MATLAB and open getCreakDetectorOutput.m file. Change your out/in directories on lines 12 and 36. To run the default settings for CD, make sure the thresh on line 17 is set to 0.3:0.01:0.3. Run this script.
