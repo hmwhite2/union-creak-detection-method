@@ -31,7 +31,7 @@ for k = 1 : length(theFiles)
     expression = '.wav';
     replace = '';
     newStr = regexprep(str,expression,replace);
-    newStr2 = [newStr '_' num2str(thresh(i))];
+    newStr2 = [newStr '_' num2str(thresh(i)) '_cd'];
     newStr3 = strrep(newStr2,'.','_');
     txtName = fullfile('C:\Users\46065202\Documents\test_cd', newStr3); % specify new directory for files to save to
     writecell(crk_output,txtName) % write textfiles to folder
