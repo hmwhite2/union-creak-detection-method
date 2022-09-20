@@ -11,6 +11,8 @@ their data (requiring a subset of data to be manually annotated for creak and a 
 
 The method requires researchers to use [Praat](https://www.fon.hum.uva.nl/praat/), [R](https://www.R-project.org/) and [MATLAB](https://au.mathworks.com/products/matlab.html) for processing.
 
+The demo folder contains two example wav files which have been forced aligned (corrected tier is "SON") and annotated for creaky voice in the accompanying TextGrids. These can be used to demonstrate the Union method.
+
 ## To begin:
 1. Resample sound files to 16000Hz
 2. Install REAPER (either [MacREAPER](https://kjdallaston.com/projects/) or [REAPER](https://github.com/google/REAPER/)) and download CD_method folder (adapted from [Kane et al.](https://github.com/jckane/Voice_Analysis_Toolkit/))
