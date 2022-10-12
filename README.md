@@ -30,6 +30,7 @@ The demo folder contains two example wav files which have been forced aligned (c
     b. **If you are doing a SONORANTS ONLY analysis:** Get AM output by running get_am_output_sonorants.R script in R
 
 ## CD method:
+(You may want to check that CD is measuring H2-H1 for your data - we've had a couple of instances where this has not been the case.)
 - **If you are NOT doing a threshold sweep:**
 
     1. Open CD_method folder in MATLAB and open getCreakDetectorOutput.m file. Change your out/in directories on lines 12 and 36. To run the default settings for CD, make sure the thresh on line 17 is set to 0.3:0.01:0.3. Run this script.
